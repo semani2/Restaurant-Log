@@ -1,4 +1,4 @@
-package com.sai.restaurantlog.data
+package com.sai.restaurantlog.data.room
 
 import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.*

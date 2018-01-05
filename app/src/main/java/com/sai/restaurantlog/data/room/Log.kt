@@ -1,4 +1,4 @@
-package com.sai.restaurantlog.data
+package com.sai.restaurantlog.data.room
 
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
