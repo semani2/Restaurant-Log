@@ -2,6 +2,7 @@ package com.sai.restaurantlog.data.room
 
 import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.*
+import io.reactivex.Flowable
 
 /**
  * Created by sai on 1/5/18.
@@ -13,14 +14,14 @@ import android.arch.persistence.room.*
      * Get all logs
      */
     @Query("SELECT * FROM Log")
-    fun getAllLogs(): LiveData<List<Log>>
+    fun getAllLogs(): Flowable<List<Log>>
 
     /**
      * Get log by id
      * @param id = log id
      */
     @Query("SELECT * FROM Log WHERE id = :id")
-    fun getLogById(id: Long): LiveData<Log>
+    fun getLogById(id: Long): Flowable<Log>
 
     /**
      * Insert a new log item
