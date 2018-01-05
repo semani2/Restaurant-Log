@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RestaurantLog</string>
+    <string name="str_restaurant_name">Restaurant name</string>
+    <string name="str_review">Review</string>
+    <string name="str_save">Save</string>
+
+    <string name="str_add_new_log">Add new log</string>
 </resources>

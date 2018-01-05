@@ -2,6 +2,7 @@ package com.sai.restaurantlog.data.repository
 
 import android.arch.lifecycle.LiveData
 import com.sai.restaurantlog.data.room.Log
+import io.reactivex.Single
 
 /**
  * Created by sai on 1/5/18.
@@ -13,7 +14,7 @@ interface ILogRepository {
 
     fun getLog(id: Long): LiveData<Log>
 
-    fun createLog(log: Log): Long
+    fun createLog(log: Log): Single<Long>
 
     fun deleteLog(log: Log)
 }

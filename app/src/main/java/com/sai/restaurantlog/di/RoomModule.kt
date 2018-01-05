@@ -1,11 +1,13 @@
 package com.sai.restaurantlog.di
 
+import android.arch.lifecycle.ViewModelProvider
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import com.sai.restaurantlog.data.repository.ILogRepository
 import com.sai.restaurantlog.data.repository.LogRepository
 import com.sai.restaurantlog.data.room.LogDao
 import com.sai.restaurantlog.data.room.LogDatabase
+import com.sai.restaurantlog.viewmodel.CustomViewModelFactory
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -32,6 +34,10 @@ import javax.inject.Singleton
 
     @Provides @Singleton fun provideLogDatabase(): LogDatabase {
         return logDatabase
+    }
+
+    @Provides @Singleton fun provideViewModelFactory(logRepository: ILogRepository): ViewModelProvider.Factory {
+        return CustomViewModelFactory(logRepository)
     }
 
 }
