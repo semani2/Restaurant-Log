@@ -16,7 +16,7 @@ import javax.inject.Singleton
 
 @Singleton class LogRepository @Inject constructor(private val logDao: LogDao) : ILogRepository {
 
-    val allCompositeDisposable: MutableList<Disposable> = arrayListOf()
+    private val allCompositeDisposable: MutableList<Disposable> = arrayListOf()
 
     override fun getAllLogs(): LiveData<List<Log>> {
         val mutableLiveData = MutableLiveData<List<Log>>()
