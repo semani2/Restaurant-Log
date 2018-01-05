@@ -8,7 +8,7 @@ import android.arch.persistence.room.PrimaryKey
  */
 
 @Entity
-data class LogEntity(
+data class Log(
        @PrimaryKey(autoGenerate = true) val id: Long,
        var restaurantName: String,
        var review: String,
