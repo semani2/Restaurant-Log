@@ -4,7 +4,7 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import com.sai.restaurantlog.data.room.Log
 import com.sai.restaurantlog.data.room.LogDao
-import io.reactivex.Single
+import io.reactivex.Completable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
@@ -45,8 +45,11 @@ import javax.inject.Singleton
         return mutableLiveData
     }
 
-    override fun createLog(log: Log): Single<Long> {
-        return Single.just(logDao.insertLog(log))
+    override fun createLog(log: Log){
+        Completable.fromAction({logDao.insertLog(log)})
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({ android.util.Log.d("LogRepository", "Log added to database") })
     }
 
     override fun deleteLog(log: Log) {

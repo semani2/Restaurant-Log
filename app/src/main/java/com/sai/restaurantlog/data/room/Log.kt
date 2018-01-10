@@ -12,5 +12,5 @@ data class Log(
        @PrimaryKey(autoGenerate = true) val id: Long,
        var restaurantName: String,
        var review: String,
-       var rating: Long
+       var rating: Float
 )

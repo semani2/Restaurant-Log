@@ -1,6 +1,7 @@
 package com.sai.restaurantlog.di
 
 import android.app.Application
+import com.facebook.stetho.Stetho
 
 /**
  * Created by sai on 1/5/18.
@@ -15,6 +16,11 @@ class LogApplication: Application() {
     override fun onCreate() {
         super.onCreate()
         initializeDagger()
+        initializeStetho()
+    }
+
+    private fun initializeStetho() {
+        Stetho.initializeWithDefaults(this)
     }
 
     private fun initializeDagger() {

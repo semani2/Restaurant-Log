@@ -21,7 +21,8 @@
             android:layout_margin="16dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:id="@+id/add_log_fab"/>
+            android:id="@+id/add_log_fab"
+            android:src="@drawable/ic_add"/>
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

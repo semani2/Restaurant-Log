@@ -72,4 +72,7 @@ dependencies {
     compile "com.android.support:cardview-v7:$supportLibraryVersion"
     compile "com.android.support:recyclerview-v7:$supportLibraryVersion"
     compile "com.android.support:design:$supportLibraryVersion"
+
+    //Stetho
+    compile 'com.facebook.stetho:stetho:1.5.0'
 }
