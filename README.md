@@ -17,5 +17,4 @@ Tools used on the project
 [4]: https://github.com/google/dagger
 
 #####Screenshots
-![](./NewLog.png)
-![](./LogList.png)
+![](./LogScreenshots.png)
