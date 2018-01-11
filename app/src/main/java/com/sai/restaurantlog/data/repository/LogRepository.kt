@@ -53,7 +53,10 @@ import javax.inject.Singleton
     }
 
     override fun deleteLog(log: Log) {
-       return logDao.deleteLog(log)
+        Completable.fromAction({logDao.deleteLog(log)})
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({ android.util.Log.d("LogRepository", "Log deleted from database") })
     }
 
 }

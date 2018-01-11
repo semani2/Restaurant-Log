@@ -14,7 +14,7 @@ interface ILogRepository {
 
     fun getLog(id: Long): LiveData<Log>
 
-    fun createLog(log: Log): Unit
+    fun createLog(log: Log)
 
     fun deleteLog(log: Log)
 }

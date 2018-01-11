@@ -15,6 +15,8 @@ import javax.inject.Singleton
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return if (modelClass.isAssignableFrom(NewLogViewModel::class.java))
             NewLogViewModel(repository) as T
+        else if (modelClass.isAssignableFrom(ListCollectionViewModel::class.java))
+            ListCollectionViewModel(repository) as T
         else {
             throw IllegalArgumentException("ViewModel Not Found")
         }
