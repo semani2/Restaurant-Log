@@ -5,4 +5,6 @@
     <string name="str_save">Save</string>
 
     <string name="str_add_new_log">Add new log</string>
+    <string name="str_review_deleted">Review has been successfully deleted</string>
+    <string name="str_no_reviews">You have not yet added any restaurant reviews. Click on the floating action button to add a new review.</string>
 </resources>
